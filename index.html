@@ -1,0 +1,63 @@
+.<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Profile Application</h1>
+    </header>
+    <main>
+        <nav>
+            <ul>
+                <li><a href="#profile-list">Profiles</a></li>
+                <li><a href="#add-profile">Add New</a></li>
+            </ul>
+        </nav>
+        <section id="profile-list">
+            <h2>Profiles</h2>
+            <ul id="profile-items"></ul>
+        </section>
+        <section id="add-profile">
+            <h2>Add New Profile</h2>
+            <form id="profile-form">
+                <div>
+                    <label for="profile-name">Profile Name:</label>
+                    <input type="text" id="profile-name" name="profileName" required>
+                    <span class="error-message"></span>
+                </div>
+                <div>
+                    <label for="profile-url">Profile URL:</label>
+                    <input type="url" id="profile-url" name="profileUrl" required>
+                    <span class="error-message"></span>
+                </div>
+                <div>
+                    <label for="platform">Platform:</label>
+                    <select id="platform" name="platform">
+                        <option value="">Select Platform</option>
+                        <option value="linkedin">LinkedIn</option>
+                        <option value="indeed">Indeed</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="profile-description">Description:</label>
+                    <textarea id="profile-description" name="profileDescription" rows="3"></textarea>
+                </div>
+                <button type="submit">Add Profile</button>
+                <span id="add-profile-message"></span>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Profile Management App</p>
+    </footer>
+    <script src="script.js"></script>
+   
+</body>
+
+</html>
